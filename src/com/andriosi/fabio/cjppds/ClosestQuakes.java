@@ -12,9 +12,9 @@ import java.util.ArrayList;
  * @author rcpd2158
  */
 public class ClosestQuakes {
-    public void findClosestQuakes(){
+    
+    public void findClosestQuakes(String source){
         EarthQuakeParser parser = new EarthQuakeParser();
-        String source = "src/data/nov20quakedata.atom";
         ArrayList<QuakeEntry> list = parser.read(source);
         System.out.println("read data for "+ list.size());
         Location jakarta = new Location(-6.211, 106.845);
@@ -43,9 +43,5 @@ public class ClosestQuakes {
             copy.remove(minIndex);
         }       
         return ret;
-    }
-    public static void main(String... args){
-        ClosestQuakes ck = new ClosestQuakes();
-        ck.findClosestQuakes();
     }
 }

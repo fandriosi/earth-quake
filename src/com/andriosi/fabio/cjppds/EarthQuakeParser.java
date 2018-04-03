@@ -89,20 +89,4 @@ public class EarthQuakeParser {
 	}
 		return null;
     }
-	
-
-    public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException{
-	EarthQuakeParser xp = new EarthQuakeParser();
-	//String source = "C:/nov20quakedata.atom";
-	String source = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.atom";
-	ArrayList<QuakeEntry> list  = xp.read(source);
-	Collections.sort(list);
-        //EarthQuakeClient ec = new EarthQuakeClient();
-       // ec.createCSV();
-        /**ec.closeToMe();**/
-	for(QuakeEntry loc : list){
-            System.out.println(loc);
-	}
-	System.out.println("# quakes = "+list.size());        
-    }
 }

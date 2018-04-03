@@ -10,53 +10,53 @@ package com.andriosi.fabio.cjppds;
  * @author rcpd2158
  */
 class QuakeEntry implements Comparable<QuakeEntry> {
-    private Location myLocation;
-	private String title;
-	private double depth;
-	private double magnitude;
+    private Location location;
+    private String title;
+    private double depth;
+    private double magnitude;
 
-	public QuakeEntry(double lat, double lon, double mag, 
-	                  String t, double d) {
-		myLocation = new Location(lat,lon);
-		
-		magnitude = mag;
-		title = t;
-		depth = d;
-	}
+    public QuakeEntry(double latitude, double longitude, double magnitude, String title, double depth) {
+        this.location = new Location(latitude,longitude);
+        this.magnitude = magnitude;
+	this.title = title;
+	this.depth = depth;
+    }
 	
-	public Location getLocation(){
-		return myLocation;
-	}
+    public Location getLocation(){
+	return this.location;
+    }
 	
-	public double getMagnitude(){
-		return magnitude;
-	}
+    public double getMagnitude(){
+        return this.magnitude;
+    }
 	
-	public String getInfo(){
-		return title;
-	}
+    public String getInfo(){
+	return this.title;
+    }
 	
-	public double getDepth(){
-		return depth;
-	}
+    public double getDepth(){
+	return this.depth;
+    }
 
-	@Override
-	public int compareTo(QuakeEntry loc) {
-		double difflat = myLocation.getLatitude() - loc.myLocation.getLatitude();
-		if (Math.abs(difflat) < 0.001) {
-			double diff = myLocation.getLongitude() - loc.myLocation.getLongitude();
-			if (diff < 0) return -1;
-			if (diff > 0) return 1;
-			return 0;
-		}
-		if (difflat < 0) return -1;
-		if (difflat > 0) return 1;
-		
+    @Override
+    public int compareTo(QuakeEntry entry) {
+	double difflat = this.location.getLatitude() - entry.location.getLatitude();
+	if (Math.abs(difflat) < 0.001) {
+            double diff = this.location.getLongitude() - entry.location.getLongitude();
+            if (diff < 0) return -1;
+            if (diff > 0) return 1;
+            return 0;
+	}
+	if (difflat < 0) return -1;
+	if (difflat > 0) return 1;
+	
 		// never reached
-		return 0;
-	}
+	return 0;
+    }
 	
-	public String toString(){
-		return String.format("(%3.2f, %3.2f), mag = %3.2f, depth = %3.2f, title = %s", myLocation.getLatitude(),myLocation.getLongitude(),magnitude,depth,title);
-	}
+    @Override
+    public String toString(){
+        return String.format("(%3.2f, %3.2f), mag = %3.2f, depth = %3.2f, title = %s", this.location.getLatitude(),
+                this.location.getLongitude(),this.magnitude,this.depth,this.title);
+    }
 }

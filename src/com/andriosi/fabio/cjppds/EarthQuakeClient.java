@@ -33,10 +33,8 @@ public class EarthQuakeClient{
 		
     }
 	
-    public void bigQuakes() {
+    public void bigQuakes(String source) {
         EarthQuakeParser parser = new EarthQuakeParser();
-        String source = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
-        //String source = "data/nov20quakedata.atom";
         ArrayList<QuakeEntry> list = parser.read(source);
         System.out.println("read data for " + list.size() + " quakes");
         /*
@@ -52,30 +50,27 @@ public class EarthQuakeClient{
         }
     }
 	
-    public void createCSV(){
+    public void createCSV(String source){
         EarthQuakeParser parser = new EarthQuakeParser();
-       // String source = "data/nov20quakedata.atom";
-        String source = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
         ArrayList<QuakeEntry> list = parser.read(source);
         dumpCSV(list);
         System.out.println("# quakes read: " + list.size());
     }
     
-    public void closeToMe() {
+    public void closeToMe(String source, Location location) {
         EarthQuakeParser parser = new EarthQuakeParser();
         //String source = "data/nov20quakedata.atom";
-        String source = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
         ArrayList<QuakeEntry> list = parser.read(source);
         System.out.println("# quakes read: " + list.size());
         
         //Durham, NC
-        Location city = new Location(35.988, -78.907);
+        //Location city = new Location(35.988, -78.907);
         //Bridgeport, CA
         //Location city = new Location(38.17, -118.82);
-        ArrayList<QuakeEntry> close = filterByDistanceFrom(list, 1000*1000, city);
+        ArrayList<QuakeEntry> close = filterByDistanceFrom(list, 1000*1000, location);
         for (int k=0; k< close.size(); k++) {
             QuakeEntry entry = close.get(k);
-            double distanceInMeters = city.distanceTo(entry.getLocation());
+            double distanceInMeters = location.distanceTo(entry.getLocation());
             System.out.println(distanceInMeters/1000 + " " + entry.getInfo());
         }
     }

@@ -8,10 +8,6 @@ package com.andriosi.fabio.cjppds;
 import java.text.DecimalFormat;
 import java.util.StringTokenizer;
 
-/**
- *
- * @author rcpd2158
- */
 public class Location {
     /**
      * Constant used to specify formatting of a latitude or longitude

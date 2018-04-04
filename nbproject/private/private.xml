@@ -3,14 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/rcpd2158/Documents/NetBeansProjects/CJPPDS/test/com/andriosi/fabio/cjpds/test/TesteClosestQuakes.java</file>
             <file>file:/C:/Users/rcpd2158/Documents/NetBeansProjects/CJPPDS/src/com/andriosi/fabio/cjppds/EarthQuakeParser.java</file>
             <file>file:/C:/Users/rcpd2158/Documents/NetBeansProjects/CJPPDS/src/com/andriosi/fabio/cjppds/ClosestQuakes.java</file>
             <file>file:/C:/Users/rcpd2158/Documents/NetBeansProjects/CJPPDS/manifest.mf</file>
             <file>file:/C:/Users/rcpd2158/Documents/NetBeansProjects/CJPPDS/src/com/andriosi/fabio/cjppds/QuakeEntry.java</file>
-            <file>file:/C:/Users/rcpd2158/Documents/NetBeansProjects/CJPPDS/build.xml</file>
+            <file>file:/C:/Users/rcpd2158/Documents/NetBeansProjects/CJPPDS/src/data/nov20quakedata.atom</file>
             <file>file:/C:/Users/rcpd2158/Documents/NetBeansProjects/CJPPDS/src/com/andriosi/fabio/cjppds/EarthQuakeClient.java</file>
+            <file>file:/C:/Users/rcpd2158/Documents/NetBeansProjects/CJPPDS/build.xml</file>
+            <file>file:/C:/Users/rcpd2158/Documents/NetBeansProjects/CJPPDS/src/com/andriosi/fabio/cjppds/Filter.java</file>
+            <file>file:/C:/Users/rcpd2158/Documents/NetBeansProjects/CJPPDS/src/com/andriosi/fabio/cjppds/MinimeMagnitudeFilter.java</file>
             <file>file:/C:/Users/rcpd2158/Documents/NetBeansProjects/CJPPDS/src/cjppds/CJPPDS.java</file>
             <file>file:/C:/Users/rcpd2158/Documents/NetBeansProjects/CJPPDS/src/com/andriosi/fabio/cjppds/Location.java</file>
+            <file>file:/C:/Users/rcpd2158/Documents/NetBeansProjects/CJPPDS/test/com/andriosi/fabio/cjpds/test/TesteEathQuakeClient.java</file>
         </group>
     </open-files>
 </project-private>

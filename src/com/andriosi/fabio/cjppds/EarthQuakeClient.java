@@ -74,4 +74,13 @@ public class EarthQuakeClient{
             System.out.println(distanceInMeters/1000 + " " + entry.getInfo());
         }
     }
+    public ArrayList <QuakeEntry> filter(ArrayList<QuakeEntry> quakeData, Filter filter){
+        ArrayList<QuakeEntry> answer = new ArrayList<>();
+        for(QuakeEntry qe : quakeData){
+            if(filter.satisfies(qe)){
+                answer.add(qe);
+            }
+        }
+        return answer;
+    }
 }

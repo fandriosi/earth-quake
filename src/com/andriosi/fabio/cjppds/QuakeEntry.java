@@ -5,11 +5,7 @@
  */
 package com.andriosi.fabio.cjppds;
 
-/**
- *
- * @author rcpd2158
- */
-class QuakeEntry implements Comparable<QuakeEntry> {
+public class QuakeEntry implements Comparable<QuakeEntry> {
     private Location location;
     private String title;
     private double depth;

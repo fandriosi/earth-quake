@@ -6,15 +6,12 @@
 package com.andriosi.fabio.cjpds.test;
 
 import com.andriosi.fabio.cjppds.ClosestQuakes;
+import com.andriosi.fabio.cjppds.EarthQuakeClient;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author rcpd2158
- */
 public class TesteClosestQuakes {
-    
+    private String source = "src/data/nov20quakedata.atom";
     public TesteClosestQuakes() {
     }
 
@@ -23,8 +20,8 @@ public class TesteClosestQuakes {
     //
      @Test
      public void TesteClosest() {
-         ClosestQuakes cq = new ClosestQuakes();
-         String sources ="src/data/nov20quakedata.atom";
-         cq.findClosestQuakes(sources);
+         ClosestQuakes cq = new ClosestQuakes();        
+         cq.findClosestQuakes(source);
      }
+    
 }

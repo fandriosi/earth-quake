@@ -5,8 +5,8 @@
  */
 package com.andriosi.fabio.cjpds.test;
 
-import com.andriosi.fabio.cjppds.ClosestQuakes;
-import com.andriosi.fabio.cjppds.EarthQuakeClient;
+import com.andriosi.fabio.cjppds.filter.ClosestQuakes;
+import com.andriosi.fabio.cjppds.filter.EarthQuakeClient;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

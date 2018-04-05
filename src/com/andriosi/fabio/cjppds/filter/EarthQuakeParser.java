@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.andriosi.fabio.cjppds;
+package com.andriosi.fabio.cjppds.filter;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;

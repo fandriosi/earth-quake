@@ -1,4 +1,4 @@
-package com.andriosi.fabio.cjppds;
+package com.andriosi.fabio.cjppds.filter;
 import java.util.*;
 import edu.duke.*;
 public class EarthQuakeClient{

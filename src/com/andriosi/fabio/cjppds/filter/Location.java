@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.andriosi.fabio.cjppds;
+package com.andriosi.fabio.cjppds.filter;
 
 import java.text.DecimalFormat;
 import java.util.StringTokenizer;
